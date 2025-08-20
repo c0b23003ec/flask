@@ -24,7 +24,8 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 load_dotenv()
-TOKEN = os.getenv("TOKEN")
+# TOKEN = os.getenv("TOKEN")
+TOKEN = os.environ["TOKEN"]
 
 @bot.event
 async def on_ready():
